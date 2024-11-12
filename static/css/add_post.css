@@ -1,0 +1,139 @@
+/* Conteneur principal du post */
+.post-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* En-tête du post avec avatar et nom d'utilisateur */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Titre et image du post */
+.post-title {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Description du post */
+.post-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 1rem 0;
+}
+
+/* Boutons d'actions (like, comment) */
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.like-btn, .comment-btn {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.like-btn:hover, .comment-btn:hover {
+    background-color: #0056b3;
+}
+
+.like-count, .comment-count {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Section des commentaires */
+.post-comments {
+    margin-top: 2rem;
+}
+
+.post-comments h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-list li:last-child {
+    border-bottom: none;
+}
+
+/* Formulaire d'ajout de commentaire */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.comment-form button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #218838;
+}

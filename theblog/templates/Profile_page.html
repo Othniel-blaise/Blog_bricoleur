@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil de l'utilisateur</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <div class="profile-header">
+        <img src="{% static 'images/default_profile.png' %}" alt="Photo de profil" class="profile-photo">
+        <h2>{{ user.username }}</h2>
+        <p>{{ user.profile.bio }}</p>
+        <button>Ajouter en ami</button>
+        <button>Envoyer un message</button>
+    </div>
+
+    <div class="profile-content">
+        <div class="posts-section">
+            <h3>Publications</h3>
+            {% for post in user_posts %}
+                <div class="post">
+                    <h4>{{ post.title }}</h4>
+                    <p>{{ post.content }}</p>
+                </div>
+            {% empty %}
+                <p>Aucune publication pour le moment.</p>
+            {% endfor %}
+        </div>
+
+        <div class="friends-section">
+            <h3>Amis</h3>
+            {% for friend in user_friends %}
+                <p>{{ friend.username }}</p>
+            {% empty %}
+                <p>Aucun ami ajouté.</p>
+            {% endfor %}
+        </div>
+
+        <div class="messages-section">
+            <h3>Messages</h3>
+            {% for message in user_messages %}
+                <p><strong>{{ message.sender.username }}:</strong> {{ message.content }}</p>
+            {% empty %}
+                <p>Aucun message pour le moment.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
